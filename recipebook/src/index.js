@@ -1,14 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-ReactDOM.render(
-  
-    <Router>
-      <App />
+import App from './App';
+import About from './components/About'
+import Contact from './components/Contact'
+
+render(
+  <Router>
+    <Routes>
+      {/* you have to make inside pages children of app, otherwise the 'home' page will not persist on the page */}
+      <Route path='/' element={<App />} >
+        <Route path='about' element={<About />} />
+        <Route path='contact' element={<Contact />} />
+      </Route>
+    </Routes>
     </Router>,
   document.getElementById('root')
 );

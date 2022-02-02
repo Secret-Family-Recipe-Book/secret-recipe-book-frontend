@@ -1,19 +1,17 @@
 import './App.css';
-import { Link, Route} from "react-router-dom"
+import { Link, Outlet} from "react-router-dom"
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div>
-          <ul>
-            <Link to="/">Home</Link>
-            <li>Log in</li>
-            <li>Search</li>
-          </ul>
-            <Route path='/'></Route>
-        </div>
-      </header>
+      <h1>this is a title</h1>
+        <nav>
+              <Link to="/contact">Contact</Link>
+              <Link to='/about'>About</Link>
+      </nav>
+      <Outlet />
     </div>
   );
 }
