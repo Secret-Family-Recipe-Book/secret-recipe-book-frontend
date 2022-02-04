@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import App from './App';
 import About from './components/About'
 import Contact from './components/Contact'
+import AddRecipes from './components/AddRecipe'
 
 render(
   <Router>
@@ -15,6 +16,7 @@ render(
       <Route path='/' element={<App />} >
         <Route path='about' element={<About />} />
         <Route path='contact' element={<Contact />} />
+        <Route path='add' element={<AddRecipes />} />
       </Route>
     </Routes>
     </Router>,

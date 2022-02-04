@@ -1,7 +1,19 @@
-
 .header{
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
+height: 180px;
+background-image: url("https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg");
+background-size: 30rem 11rem;
+width: 100%;
+}
+
+
+.homeLink{
+  text-decoration: none;
+  font-size: 3rem;
+  color: white;
+  font-weight:bold;
+
 }
 
 .navBar{
@@ -18,10 +30,26 @@
 }
 
 .navButton:visited {
-  color:blueviolet;
+  color:black;
 }
 
 .navButton:hover{
-  color: black;
+  color:coral;
   font-size: 1.07em;
+}
+
+/* styling for adding a recipe component */
+.form{
+  justify-content: center;
+  margin: 0 auto;
+  width: 350px;
+  height: 500px;
+}
+
+.label{
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  
+  font-size: large;
 }
