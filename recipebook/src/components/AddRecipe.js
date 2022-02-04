@@ -9,7 +9,6 @@ const AddRecipe = () => {
         setIngredient({...ingredient, [e.target.name]:e.target.value})
         //function to handle adding ingredient to list.
     }
-    
 
     const addIngredientButton = (e) => {
         e.preventDefault()
@@ -18,7 +17,7 @@ const AddRecipe = () => {
         })
         return itemIngredients
     }
-    console.log(ingredient)
+    //cannot figure out how to make a list out of the state and display the list on its on div underneath the form, I am moving on
     
 
     return (
@@ -49,9 +48,22 @@ const AddRecipe = () => {
                         onSubmit={addIngredientButton}
                     >+</button>
                 </label>
-                <ul>
-                    
-                </ul>
+                    <br></br>
+                <label>What time a day should we eat this? {' '}
+                    <select name="category">
+                        <option value='breakfast'>Breakfast</option>
+                        <option value='lunch'>Lunch</option>
+                        <option value='dinner'>Dinner</option>
+                        <option value='dessert'>Dessert</option>
+                    </select>
+                </label>
+                <label>
+                    <input
+                        type="textarea"
+                        className="label"
+                        placeholder="Preparation"
+                    />
+                </label>
             </form>
         </div>
     )
