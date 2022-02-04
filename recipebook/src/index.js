@@ -6,8 +6,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import App from './App';
 import About from './components/About'
-import Contact from './components/Contact'
+import Login from './components/Login'
 import AddRecipes from './components/AddRecipe'
+import RequireAuth from './components/RequireAuth'
 
 render(
   <Router>
@@ -15,8 +16,15 @@ render(
       {/* you have to make inside pages children of app, otherwise the 'home' page will not persist on the page */}
       <Route path='/' element={<App />} >
         <Route path='about' element={<About />} />
-        <Route path='contact' element={<Contact />} />
-        <Route path='add' element={<AddRecipes />} />
+        <Route path='login' element={<Login />} />
+        <Route
+          path='add'
+          element={
+            <RequireAuth>
+              <AddRecipes />
+            </RequireAuth>
+          }
+        />
       </Route>
     </Routes>
     </Router>,

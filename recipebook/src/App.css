@@ -38,6 +38,11 @@ width: 100%;
   font-size: 1.07em;
 }
 
+.search{
+  font-size: large;
+  width: 120px;
+}
+
 /* styling for adding a recipe component */
 .form{
   justify-content: center;

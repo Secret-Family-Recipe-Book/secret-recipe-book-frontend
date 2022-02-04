@@ -64,6 +64,7 @@ const AddRecipe = () => {
                         placeholder="Preparation"
                     />
                 </label>
+                <button type="submit">Submit</button>
             </form>
         </div>
     )
