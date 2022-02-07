@@ -2,7 +2,7 @@ import React from 'react'
 
 const RequireAuth = () => {
     return (
-        <h1>hello world</h1>
+        <h1>auth not yet set up</h1>
     )
 }
 
